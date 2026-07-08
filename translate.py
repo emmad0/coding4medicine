@@ -55,6 +55,7 @@ def findproteins(aminos):
 				proteins.append(aminolist)
 				count = 0
 	return (proteins)
+
 x = translation(seq, 0)
 print(x)
 
