@@ -1,0 +1,12 @@
+4589: ORF1ab polyprotein [Severe acute respiratory syndrome coronavirus 2]
+8464: Chain A, ORF3a protein [Severe acute respiratory syndrome coronavirus 2]
+9131: ORF7a-F2A linker-mCherry [Reverse genetics vector pCCI-4K-SARS-CoV-2-mCherry]
+
+88: ORF1ab polyprotein [Severe acute respiratory syndrome coronavirus 2]
+7178: surface glycoprotein [Severe acute respiratory syndrome coronavirus 2]
+9424: nucleocapsid phosphoprotein [Severe acute respiratory syndrome coronavirus 2]
+
+7311: surface glycoprotein, partial [Severe acute respiratory syndrome coronavirus 2]
+8840: Chain A, Membrane protein [SARS-CoV-2 pseudovirus]
+9297: ORF8 protein [Severe acute respiratory syndrome coronavirus 2]
+9427: RecName: Full=ORF9b protein; Short=ORF9b; AltName: Full=Accessory protein 9b; AltName: Full=ORF-9b; AltName: Full=Protein 9b [Severe acute respiratory syndrome coronavirus 2]
