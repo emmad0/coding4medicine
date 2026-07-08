@@ -42,3 +42,5 @@ for i in range(2, len(dna)-2, 3):
     protein3.append(aminos[codon])
 print (protein3)
 
+for i in protein1:
+
