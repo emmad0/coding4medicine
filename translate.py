@@ -42,7 +42,7 @@ def translation(seq, start):
 def findproteins(aminos):
     count = 0
     start = False
-    proteins = ""
+    proteins = []
     aminostemp = ""
     aminoacids = ["I", "M", "T", "N", "K", 'S', 'R', 'L', 'P', 'H', 'Q', 'R', 'V', 'A', 'D', 'E', 'G', 'S', 'F', 'L', 'Y', 'C', "W"]
 
@@ -57,7 +57,7 @@ def findproteins(aminos):
         elif i == "*":
             aminostemp += "*"
             if count > 100:
-                proteins += aminostemp + "\n"
+                proteins.append(aminostemp)
             aminostemp = ""
             count = 0
             start = False
@@ -112,6 +112,13 @@ def findproteins(aminos):
 				count = 0
 	return (proteins)
 '''
+def findposition(seq, proteins):
+        positions = []
+        for protein in proteins:
+       	         start = seq.find(protein)
+       	         end = start + len(protein)
+                 positions.append((str(start)+","+str(end)))
+        return (positions)
 x = translation(seq, 0)
 # print(x)
 
@@ -125,8 +132,14 @@ y = translation(seq, 1)
 z = translation(seq, 2)
 # print(z)
 
-print(findproteins(x))
-print()
-print(findproteins(y))
-print()
-print(findproteins(z))
+a = findproteins(x)
+print (a)
+print(findposition(x, a))
+print ()
+b = findproteins(y)
+print (b)
+print(findposition(y, b))
+print ()
+c = findproteins(z)
+print (c)
+print(findposition(z, c))
