@@ -53,6 +53,7 @@ def findproteins(aminos):
 			start = False
 			if count > 100:
 				proteins.append(aminolist)
+				count = 0
 	return (proteins)
 x = translation(seq, 0)
 print(x)
