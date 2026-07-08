@@ -37,7 +37,44 @@ def translation(seq, start):
             translation += aminoacids[seq[i:i+3]]
 
     return translation
+
+
 def findproteins(aminos):
+        count = 0
+        start = False
+        proteins = ""
+        for a in aminos:
+                if start == True:
+                        aminostr += str(a)
+                        count +=1
+                if a == "M" and start == False:
+                        start = True
+                        count += 1
+                        aminostr = "M"
+                if a == "*" and start == True:
+                        start = False
+                        if count > 100:
+                                proteins += aminostr
+                                print(proteins)
+                                print()
+                                print(count)
+                                print()
+                        count = 0
+        return (proteins)
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''def findproteins(aminos):
 	count = 0
 	start = False
 	proteins = []
@@ -55,7 +92,7 @@ def findproteins(aminos):
 				proteins.append(aminolist)
 				count = 0
 	return (proteins)
-
+'''
 x = translation(seq, 0)
 print(x)
 
