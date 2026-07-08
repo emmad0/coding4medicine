@@ -40,28 +40,47 @@ def translation(seq, start):
 
 
 def findproteins(aminos):
-        count = 0
-        start = False
-        proteins = ""
-        for a in aminos:
-                if start == True:
-                        aminostr += str(a)
-                        count +=1
-                if a == "M" and start == False:
-                        start = True
-                        count += 1
-                        aminostr = "M"
-                if a == "*" and start == True:
-                        start = False
-                        if count > 100:
-                                proteins += aminostr
-                                print(proteins)
-                                print()
-                                print(count)
-                                print()
-                        count = 0
-        return (proteins)
+    count = 0
+    start = False
+    proteins = ""
+    aminostemp = ""
+    aminoacids = ["I", "M", "T", "N", "K", 'S', 'R', 'L', 'P', 'H', 'Q', 'R', 'V', 'A', 'D', 'E', 'G', 'S', 'F', 'L', 'Y', 'C', "W"]
 
+    for i in aminos:
+        if i == "M" and start == False:
+            aminostemp = "M"
+            start = True
+            count += 1
+        elif i in aminoacids:
+            aminostemp += i
+            count += 1
+        elif i == "*":
+            aminostemp += "*"
+            if count > 100:
+                proteins += aminostemp + "\n"
+            aminostemp = ""
+            count = 0
+            start = False
+
+    return(proteins)
+
+    '''for a in aminos:
+            if start == True:
+                    aminostr += str(a)
+                    count +=1
+            if a == "M" and start == False:
+                    start = True
+                    count += 1
+                    aminostr = "M"
+            if a == "*" and start == True:
+                    start = False
+                    if count > 100:
+                            proteins += aminostr
+                            print(proteins)
+                            print()
+                            print(count)
+                            print()
+                    count = 0'''
 
 
 
@@ -94,18 +113,20 @@ def findproteins(aminos):
 	return (proteins)
 '''
 x = translation(seq, 0)
-print(x)
+# print(x)
 
-print()
+# print()
 
 y = translation(seq, 1)
-print(y)
+# print(y)
 
-print()
+# print()
 
 z = translation(seq, 2)
-print(z)
+# print(z)
 
-print (findproteins(x))
-print (findproteins(y))
-print (findproteins(z))
+print(findproteins(x))
+print()
+print(findproteins(y))
+print()
+print(findproteins(z))
