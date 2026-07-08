@@ -143,3 +143,5 @@ print ()
 c = findproteins(z)
 print (c)
 print(findposition(z, c))
+
+print(len(seq))

@@ -2,6 +2,7 @@
 4589: ORF1ab polyprotein [Severe acute respiratory syndrome coronavirus 2]
 7178: surface glycoprotein [Severe acute respiratory syndrome coronavirus 2]
 7311: surface glycoprotein, partial [Severe acute respiratory syndrome coronavirus 2]
+	inside 7178, false pos
 8464: Chain A, ORF3a protein [Severe acute respiratory syndrome coronavirus 2]
 8840: Chain A, Membrane protein [SARS-CoV-2 pseudovirus]
 9131: ORF7a-F2A linker-mCherry [Reverse genetics vector pCCI-4K-SARS-CoV-2-mCherry]
