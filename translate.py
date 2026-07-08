@@ -38,8 +38,15 @@ def translation(seq, start):
 
     return translation
 
-print(translation(seq, 0))
+x = translation(seq, 0)
+print(x)
+
 print()
-print(translation(seq, 1))
+
+y = translation(seq, 1)
+print(y)
+
 print()
-print(translation(seq, 2))
+
+z = translation(seq, 2)
+print(z)
