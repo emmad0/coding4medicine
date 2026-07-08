@@ -4,7 +4,7 @@ lines = f.readlines()
 dna = ""
 for a in lines:
 	dna+=a.rstrip("\n")
-protein = []
+protein1 = []
 aminos = {
     'ATA':'I', 'ATC':'I', 'ATT':'I', 'ATG':'M',
     'ACA':'T', 'ACC':'T', 'ACG':'T', 'ACT':'T',
@@ -27,15 +27,18 @@ aminos = {
 start = False
 for i in range(0, len(dna)-2, 3):
     codon = dna[i:i+3]
-    protein.append(aminos[codon])
-print (protein)
+    protein1.append(aminos[codon])
+print (protein1)
 print ("\n")
+protein2 = []
 for i in range(1, len(dna)-2, 3):
     codon = dna[i:i+3]
-    protein.append(aminos[codon])
-print (protein)
+    protein2.append(aminos[codon])
+print (protein2)
 print ("\n")
+protein3 = []
 for i in range(2, len(dna)-2, 3):
     codon = dna[i:i+3]
-    protein.append(aminos[codon])
-print (protein)
+    protein3.append(aminos[codon])
+print (protein3)
+
